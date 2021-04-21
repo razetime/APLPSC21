@@ -5,12 +5,14 @@
 ⍝ Regex equivalent: \d-
 ⍝ then the rest is simply generating each range.
 
-splitRange←{⍎¨⍵⊆⍨~0,2{(⍵∊'-¯')∧⍺∊⎕D}/⍵}
 
 ⍝ Similar to dyadic … in Dyalog Extended
-range←{
+Range←{
     i←⍵-⍺
     ⍺+(×i)×0,⍳|i
 }/
-MakeList←{⊃,/⊃¨range¨splitRange¨',' (≠⊆⊢) ⍵}
+MakeList←{
+    0=≢⍵:⍬ ⍝ Handle empty case
+    ⊃,/⊃¨Range/¨{⍎¨⍵⊆⍨~0,2{(⍵∊'-¯')∧⍺∊⎕D}/⍵}¨','(≠⊆⊢)⍵
+},
 :EndNamespace
