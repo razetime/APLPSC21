@@ -5,7 +5,6 @@
 ⍝ Regex equivalent: \d-
 ⍝ then the rest is simply generating each range.
 
-split←≠⊆⊢
 splitRange←{⍎¨⍵⊆⍨~0,2{(⍵∊'-¯')∧⍺∊⎕D}/⍵}
 
 ⍝ Similar to dyadic … in Dyalog Extended
@@ -13,5 +12,5 @@ range←{
     i←⍵-⍺
     ⍺+(×i)×0,⍳|i
 }/
-MakeList←{⊃,/⊃¨range¨splitRange¨',' split ⍵}
+MakeList←{⊃,/⊃¨range¨splitRange¨',' (≠⊆⊢) ⍵}
 :EndNamespace

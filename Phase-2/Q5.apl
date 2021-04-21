@@ -8,7 +8,6 @@
 ⍝ Part 2:
 	⍝ similar base conversion, but a bit more complex.
 	⍝ https://stackoverflow.com/questions/12293870/algorithm-to-get-all-possible-string-combinations-from-array-up-to-certain-lengt
-	lexv←
 ⍝ interface A {
 ⍝ public static void main(String[] args){
 ⍝     char [] letters = new char [] {'0','a','b','c','1','2','3'};
@@ -47,9 +46,9 @@ combs←{
 	{
 		current←⍵
 		combin←⍬
-		current⊣{
+		combin⊣{
 			rem←b|current
-			rem=0:{combin,←letters[b]⋄current←¯1+⌊current÷b}0
+			rem=0:{combin,←letters[b]⋄current⊢←¯1+⌊current÷b}0
 			combin,←letters[rem]
 			current←⌊current÷b
 		}⍣{current>0}
