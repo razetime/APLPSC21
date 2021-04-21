@@ -14,7 +14,7 @@ My answers for https://www.dyalogaplcompetition.com/
 4. ×(only kinda done)
 5. Parts:
  1. ∘
- 2. ×
+ 2. ∘
 6. Parts:
  1. ×
  2. ×
