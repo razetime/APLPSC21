@@ -9,7 +9,7 @@
 ValidBoard←{
 		m←⌈/,⍵ ⍝ max element
 		m=0:1
-		ships←⍸¨⍵∘=¨⍳m ⍝ get dem ships
+		ships←(⊃,⊢)⍸¨⍵∘=¨⍳m ⍝ get dem ships
 		x y←↓⍉↑ships
 		allEqual←{1=≢∪⍵} ⍝ exactly 1 distinct element?
 		differBy1←{⍵≡(⌊/⍵)↓⍳⌈/⍵} ⍝ matches range min..max?
