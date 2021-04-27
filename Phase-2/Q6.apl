@@ -17,7 +17,8 @@ ValidBoard←{
 ⍝ ⍺⍺≡⍴⍵ shape match?
 ⍝ Reminder to self that all the points can't be the same for the above since we're taking distinct pts from a matrix.
 ⍝ ⍵⍵≡≢¨ships check ship lengths
-		(⍺⍺≡⍴⍵)∧(⍵⍵≡≢¨fleets)∧∧/{2>≢⍵:0⋄1=≢∪2-/⍵}¨fleets
+⍝ Points have to be collinear and 1 unit away from each other.
+		(⍺⍺≡⍴⍵)∧(⍵⍵≡≢¨fleets)∧∧/{2>≢⍵:0⋄∧/0 1∘=¨{⍵[⍋⍵]}¨|2-/⍵}¨fleets
 }
 
 :EndNamespace

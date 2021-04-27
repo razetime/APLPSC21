@@ -16,8 +16,8 @@ My answers for https://www.dyalogaplcompetition.com/
  1. ∘
  2. ∘
 6. Parts:
- 1. ×
+ 1. ∘
  2. ×
 7.
- 1. ×
+ 1. ∘
  2. ×
