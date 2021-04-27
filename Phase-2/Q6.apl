@@ -7,18 +7,17 @@
 ⍝ (Who are we to determine the validity of battles? smh)
 ⍝ TODO: working with the empty and zero edge cases
 ValidBoard←{
+	⍝ Reference:
+	⍝ ⍺⍺ → board size
+	⍝ ⍵⍵ → fleet sizes in order
+	⍝ ⍵ → board as matrix
 		m←⌈/,⍵ ⍝ max element
-		m=0:1
-		ships←(⊃,⊢)⍸¨⍵∘=¨⍳m ⍝ get dem ships
-		x y←↓⍉↑ships
-		allEqual←{1=≢∪⍵} ⍝ exactly 1 distinct element?
-		differBy1←{⍵≡(⌊/⍵)↓⍳⌈/⍵} ⍝ matches range min..max?
+		fleets←⍸¨⍵∘=¨⍳m ⍝ get dem ships
+		(m=0)∧0=≢fleets:1
 ⍝ ⍺⍺≡⍴⍵ shape match?
-⍝ (((allEqual y) ∧ differBy1 x)∨(allEqual x) ∧ differBy1 y) check the x and y values for straight line
-⍝ Reminder to self that all the points can't be the same for the above since we're taking distinct pts froma matrix.
-⍝ can definitely be improved, if I can find a way to do the single point case.
+⍝ Reminder to self that all the points can't be the same for the above since we're taking distinct pts from a matrix.
 ⍝ ⍵⍵≡≢¨ships check ship lengths
-		(⍺⍺≡⍴⍵)∧(((allEqual y)∧differBy1 x)∨(allEqual x)∧differBy1 y)∧⍵⍵≡≢¨ships
+		(⍺⍺≡⍴⍵)∧(⍵⍵≡≢¨fleets)∧∧/{2>≢⍵:0⋄1=≢∪2-/⍵}¨fleets
 }
 
 :EndNamespace
