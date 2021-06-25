@@ -8,5 +8,9 @@
 ⍝ Part 2:
 	⍝ A bit more complex. I used recursion, but there's probably an iterative way to generate the indices.
 	⍝ I am pretty happy with how this one turned out.
-	lexv←{w←⍵ ⋄ Inner←{a←⍺ ⋄ ⍺=1:⍵ ⋄ ⊃,/{(⊂⍵),(a-1)Inner ⍵∘,¨w}¨⍵} ⋄ ⍺ Inner ,¨⍵}
+	lexv←{
+		w←⍵
+		Inner←{a←⍺ ⋄ ⍺=1:⍵ ⋄ ⊃,/{(⊂⍵),(a-1)Inner ⍵∘,¨w}¨⍵}
+		⍺ Inner ,¨⍵
+	}
 :EndNamespace

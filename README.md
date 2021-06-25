@@ -11,13 +11,13 @@ My answers for https://www.dyalogaplcompetition.com/
  2. ×
 2. ∘
 3. ∘
-4. ×(only kinda done)
+4. ∘
 5. Parts:
  1. ∘
  2. ∘
 6. Parts:
  1. ∘
- 2. ×
+ 2. ∘
 7.
  1. ∘
  2. ×
