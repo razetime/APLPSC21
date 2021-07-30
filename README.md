@@ -20,4 +20,4 @@ My answers for https://www.dyalogaplcompetition.com/
  2. ∘
 7.
  1. ∘
- 2. ×
+ 2. ∘

@@ -50,10 +50,9 @@ ValidBoard2←{
 	⍝ Same idea as the previous.
 	(∨/0=⍴⍵)∧⍬≡⍵⍵:1
 	(∨/0=⍴⍵)∧⍬≢⍵⍵:0
-	fleets ← FleetFinder ⍵
+  fleets ← FleetFinder ⍵
   fleetDistCheck ← ∧/{∧/3>2(+/×⍨⍤-)/⍵}¨fleets
 	fleetBetween ← (⊢≡∪)⊃,/(.5×+)/¨fleets
-  ⍝ fleetDistCheck⊣⎕←fleetBetween
 	(⍺⍺≡⍴⍵)∧(⍵⍵≡≢¨fleets)∧fleetDistCheck∧fleetBetween
 }
 
