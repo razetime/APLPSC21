@@ -7,17 +7,17 @@ My answers for https://www.dyalogaplcompetition.com/
 **Phase 2**
 (`∘` for complete , `×` for incomplete)
 1. Parts:
- 1. ∘
- 2. ×
+  1. ∘
+  2. ×
 2. ∘
 3. ∘
 4. ∘
 5. Parts:
- 1. ∘
- 2. ∘
+  1. ∘
+  2. ∘
 6. Parts:
- 1. ∘
- 2. ∘
+  1. ∘
+  2. ∘
 7.
- 1. ∘
- 2. ∘
+  1. ∘
+  2. ∘
