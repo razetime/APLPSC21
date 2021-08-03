@@ -14,7 +14,6 @@ ValidBoard←{
 	⍝ ⍺⍺ → board size
 	⍝ ⍵⍵ → fleet sizes in order
 	⍝ ⍵ → board as matrix
-		⍝ (m=0)∧0=≢fleets:1
 		⍝ Special case for 0 0⍴0:
 		(∨/0=⍴⍵)∧⍬≡⍵⍵:1
   		(∨/0=⍴⍵)∧⍬≢⍵⍵:0
@@ -51,9 +50,9 @@ ValidBoard2←{
 	(∨/0=⍴⍵)∧⍬≡⍵⍵:1
 	(∨/0=⍴⍵)∧⍬≢⍵⍵:0
   fleets ← FleetFinder ⍵
-  fleetDistCheck ← ∧/{∧/3>2(+/×⍨⍤-)/⍵}¨fleets
-	fleetBetween ← (⊢≡∪)⊃,/(.5×+)/¨fleets
-	(⍺⍺≡⍴⍵)∧(⍵⍵≡≢¨fleets)∧fleetDistCheck∧fleetBetween
+  fleetDistCheck ← ∧/{∧/3>2(+/×⍨⍤-)/⍵}¨fleets ⍝ Check distances of all points (<3?)
+	fleetBetween ← (⊢≡∪)⊃,/(.5×+)/¨fleets ⍝ Are all points in between unique?
+	(⍺⍺≡⍴⍵)∧(⍵⍵≡≢¨fleets)∧fleetDistCheck∧fleetBetween ⍝ Bring all the logic together
 }
 
   ⍝ Tests(All Passed):

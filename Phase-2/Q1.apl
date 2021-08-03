@@ -12,7 +12,6 @@
 ⍝ Now, in order to be valid:
 ⍝ 1. Rank must be 1 → 1 = ≢⍴⍵
 ⍝ 2. size must be correct.
-⍝ 3.
 LastSet←{ ⍝ check the last set
     ≢⍵<2:0
     ∧/(2↑⍵)∊⎕D:2=≢⍵ ⍝ no bonus without the below conditions
