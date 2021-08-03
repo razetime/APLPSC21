@@ -8,7 +8,7 @@ My answers for https://www.dyalogaplcompetition.com/
 (`∘` for complete , `×` for incomplete)
 1. Parts:
     1. ∘
-    2. ×
+    2. ∘
 2. ∘
 3. ∘
 4. ∘
@@ -18,6 +18,6 @@ My answers for https://www.dyalogaplcompetition.com/
 6. Parts:
     1. ∘
     2. ∘
-7.
+7. Parts:
     1. ∘
     2. ∘
